@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 12vh;
+  background-color: var(--mainColor);
+}
+
+.logo {
+  display: grid;
+  width: 40%;
+  grid-template-columns: 3fr 3fr 4fr 2fr;
+  font-weight: 600;
+}
+
+span {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+span a {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+svg {
+  margin-top: 8%;
+  margin-left: 100px;
+  width: 60%;
+  height: 60%;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+}
+ul a {
+  font-size: 17px;
+  color: white;
+}
+ul a:hover {
+  color: purple;
+}
+ul :nth-child(5) {
+  margin-left: -10px;
+}
+
+#nav2 {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.magazia {
+  display: none !important;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../pic/Cyber\ copy.avif);
+  position: absolute;
+  background-repeat: no-repeat;
+  transition: 3s;
+}
+main #baner {
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+  width: 85%;
+  margin-top: 300px;
+}
+main #baner :first-child {
+  display: grid;
+  width: 40%;
+  height: 45vh;
+  border-radius: 25px;
+  background-color: rgb(136, 88, 237);
+  color: white;
+}
+main #baner :first-child p {
+  background-color: rgba(240, 248, 255, 0);
+  display: flex;
+  flex-direction: column;
+  font-size: 140%;
+  height: 10px;
+  width: 100%;
+  margin-left: 16%;
+  margin-top: 30px;
+}
+main #baner :first-child #bug {
+  margin-top: -30px;
+}
+main #baner :first-child strong {
+  width: 100%;
+  margin-left: 15%;
+  font-size: 500%;
+}
+main #baner :first-child button {
+  margin-top: -20px;
+  background-image: none;
+  background-color: white;
+  color: rgb(136, 88, 237);
+  font-size: 18px;
+  border: none;
+  padding: 8px;
+  font-weight: 600;
+}
+main #baner :first-child button:hover {
+  background-color: rgb(136, 88, 237);
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+main #baner #virus {
+  border-radius: 20px;
+  width: 54vh;
+  margin-bottom: -50px;
+  background-image: url(../pic/Cyber\ copy\ \(1\).avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --mainColor: rgba(40, 19, 54, 0.897);
+}
+
+@media screen and (max-width: 1440px) {
+  .logo {
+    grid-template-columns: 2fr 2fr 1fr 1fr !important;
+  }
+  #baner :first-child {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo {
+    grid-template-columns: 3fr 2fr 1fr 1fr !important;
+  }
+  main #baner :first-child {
+    width: 59% !important;
+    height: 60vh;
+  }
+  main #baner :first-child button {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main #baner {
+    margin-top: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+  }
+  main #baner :first-child {
+    width: 100% !important;
+    height: 50vh;
+  }
+  main #baner :first-child button {
+    width: 30% !important;
+  }
+  main #baner #virus {
+    height: 50vh;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+    background-color: black;
+  }
+  nav #check:checked ~ #nav2 ul {
+    display: revert !important;
+  }
+  nav ul {
+    display: none;
+  }
+  .logo span {
+    margin-top: 15px;
+    margin-left: 60px;
+  }
+  main {
+    height: 150vh;
+  }
+  .burger {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  .burger:hover {
+    cursor: pointer;
+  }
+  .xaz {
+    margin-right: 20px;
+    gap: 100px;
+    background-color: white;
+    width: 40px;
+    height: 5px;
+    border-radius: 20%;
+  }
+  .check {
+    display: flex;
+    justify-content: center;
+  }
+  .magazia {
+    display: revert !important;
+    color: white;
+    font-size: 30px;
+  }
+  label {
+    display: flex;
+    justify-content: center;
+  }
+  #check:checked ~ #nav2 {
+    display: revert !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .logo {
+    margin-left: -80px;
+  }
+  main {
+    margin-top: -100px;
+  }
+  main #baner :first-child strong {
+    font-size: 250%;
+  }
+  main #baner :first-child p {
+    width: 80%;
+  }
+  main #baner :first-child button {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 375) {
+  main #baner :first-child strong {
+    font-size: 220%;
+  }
+  #baner :first-child p {
+    width: 70% !important;
+  }
+  #baner :first-child button {
+    padding-right: 50px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  main #baner :first-child strong {
+    font-size: 220%;
+  }
+  #baner :first-child p {
+    width: 70% !important;
+  }
+  #baner :first-child button {
+    padding-right: 50px !important;
+  }
+}/*# sourceMappingURL=style1.css.map */
